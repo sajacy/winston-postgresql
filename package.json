@@ -1,0 +1,31 @@
+{
+    "name": "winston-postgresql",
+    "description": "A Winston transport for PostgreSQL",
+    "version": "1.0.0",
+    "keywords": [
+        "winston",
+        "logging",
+        "transport",
+        "postgresql"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sajacy/winston-postgresql.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sajacy/winston-postgresql/issues"
+    },
+    "author": {
+        "name": "Jeffrey Yang",
+        "email": "jeff@yangservices.com",
+        "url": "http://yangservices.tumblr.com/"
+    },
+    "licenses": [ "MIT" ],
+    "main": "./lib/winston-postgresql",
+    "dependencies": {
+        "pg.js": ">1.0.0"
+    },
+    "engines": {
+        "node": ">= 0.8.x"
+    }
+}

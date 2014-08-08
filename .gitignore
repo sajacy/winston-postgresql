@@ -1,0 +1,8 @@
+# Modules
+node_modules
+
+# Mac OSX
+.DS_Store
+
+# VIM
+.*.sw*
