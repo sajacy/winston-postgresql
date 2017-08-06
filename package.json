@@ -16,6 +16,9 @@
     "email": "andrei.tretyakov@gmail.com",
     "url": "https://github.com/ofkindness"
   },
+  "scripts": {
+    "test": "vows --spec ./test"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
