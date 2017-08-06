@@ -1,7 +1,7 @@
 {
   "name": "winston-pg-native",
   "description": "A Winston transport for PostgreSQL. Uses high performance of native bindings.",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "keywords": [
     "winston",
     "logging",
@@ -17,7 +17,7 @@
     "url": "https://github.com/ofkindness"
   },
   "scripts": {
-    "test": "vows --spec ./test"
+    "test": "vows --spec ./test/*"
   },
   "license": "MIT",
   "repository": {

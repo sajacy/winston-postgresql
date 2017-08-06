@@ -1,13 +1,12 @@
-winston-pg-native
-=================
+# winston-pg-native
+
 [![NPM version](https://img.shields.io/npm/v/winston-pg-native.svg)](https://npmjs.org/package/winston-pg-native)
 [![Dependency Status](https://david-dm.org/ofkindness/winston-pg-native.svg?theme=shields.io)](https://david-dm.org/ofkindness/winston-pg-native)
 [![NPM Downloads](https://img.shields.io/npm/dm/winston-pg-native.svg)](https://npmjs.org/package/winston-pg-native)
 
 A Winston transport for PostgreSQL. Uses high performance of native bindings between node.js and PostgreSQL via libpq.
 
-Installation
-------------
+## Installation
 
 -	Latest release:
 
@@ -31,8 +30,7 @@ CREATE TABLE winston_logs
 )
 ```
 
-Options
--------
+## Options
 
 -	**conString:** The PostgreSQL connection string. Required.
 -	**tableConfig:** Optional object with tableName and tableFields properties, both required. Either you can use Array or a comma separated String for a `tableFields`.
@@ -42,34 +40,31 @@ Options
 See the default values used:
 
 ```js
-var options = {
-  conString: "postgres://username:password@localhost:5432/database",
+const options = {
+  conString: 'postgres://username:password@localhost:5432/database',
+  level: 'info',
   tableConfig: {
     tableName: 'winston_logs',
     tableFields: 'level, msg, meta'
-  },
-  level: 'info'
+  }
 };
 ```
 
-Usage
------
+## Usage
 
 ```js
-'use strict';
+const winston = require('winston');
+require('winston-pg-native');
 
-var winston = require("winston");
-require("winston-pg-native");
-
-var logger = new(winston.Logger)({
+const logger = new(winston.Logger)({
   transports: [
     new(winston.transports.Postgres)({
-      conString: "postgres://username:password@localhost:5432/database",
+      conString: 'postgres://username:password@localhost:5432/database',
+      level: 'info',
       tableConfig: {
         tableName: 'winston_logs',
         tableFields: 'level, msg, meta'
-      },
-      level: 'info'
+      }
     })
   ]
 });
@@ -78,17 +73,13 @@ module.exports = logger;
 ```
 
 ```js
-
 logger.log('info', 'message', {});
-
 ```
 
-AUTHORS
--------
+## AUTHORS
 
 [AUTHORS](https://github.com/ofkindness/winston-pg-native/blob/master/AUTHORS)
 
-LICENSE
--------
+## LICENSE
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)

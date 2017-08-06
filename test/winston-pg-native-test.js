@@ -8,7 +8,7 @@
 
 var vows = require('vows');
 var transport = require('winston/test/transports/transport');
-var Postgres = require('../lib/winston-pg-transport.js');
+var Postgres = require('../lib/winston-pg-native.js');
 
 var conString = 'postgres://' + process.env.POSTGRES_USER +
 ':' + process.env.POSTGRES_PASSWORD +
